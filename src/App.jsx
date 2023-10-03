@@ -1,6 +1,7 @@
 import axios from 'axios';
 import './App.css'
 
+
 import {BrowserRouter as Router,Routes,Route, useNavigate} from 'react-router-dom'
 import Signup from './pages/signup/Signup'
 import Login from './pages/login/Login'
@@ -22,7 +23,7 @@ function App() {
       token=''
     }
     else {
-      let userRes = await axios.get('http://localhost:4001/api/users', { headers: { 'x-auth-token': token } })
+      let userRes = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/users`, { headers: { 'x-auth-token': token } })
       setuserData({
         token,
         user: {

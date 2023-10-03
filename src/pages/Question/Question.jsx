@@ -20,7 +20,7 @@ function Question() {
         try {
           //sending user data to database to be logged in
           const questionAddRes = await axios.post(
-            "http://localhost:4001/api/question",
+            `${process.env.REACT_APP_BASE_URL}/api/question`,
             {
                 question: form.title,
                 question_description: form.question,

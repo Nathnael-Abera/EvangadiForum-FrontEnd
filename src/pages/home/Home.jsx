@@ -20,7 +20,7 @@ function Home({Logout}) {
   }, [userData, navigate, Logout])
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.get("http://localhost:4001/api/question");
+      const request = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/question`);
       // console.log(request.data.data)
       setallQuestions(request.data.data);
       return request;
