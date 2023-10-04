@@ -20,7 +20,7 @@ function Question() {
         try {
           //sending user data to database to be logged in
           const questionAddRes = await axios.post(
-            `https://tame-pink-ray-suit.cyclic.cloud/api/question`,
+            `https://gray-jolly-caridea.cyclic.cloud/api/question`,
             {
                 question: form.title,
                 question_description: form.question,

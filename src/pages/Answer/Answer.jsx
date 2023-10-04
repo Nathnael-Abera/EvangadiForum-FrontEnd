@@ -17,7 +17,7 @@ function Answer() {
   // console.log(question_id)
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.post (`https://tame-pink-ray-suit.cyclic.cloud/api/question/id`, {
+      const request = await axios.post (`https://gray-jolly-caridea.cyclic.cloud/api/question/id`, {
         question_id: question_id,
       });
   // console.log(question_id)
@@ -36,7 +36,7 @@ function Answer() {
     e.preventDefault();
     try {
       //sending user data to database to be logged in
-      const questionAddRes = await axios.post(`https://tame-pink-ray-suit.cyclic.cloud/api/answer`, {
+      const questionAddRes = await axios.post(`https://gray-jolly-caridea.cyclic.cloud/api/answer`, {
         answer: form.answer,
         answer_code_block: "...",
         user_id: userData.user.id,
@@ -52,7 +52,7 @@ function Answer() {
 
   useEffect(() => {
     async function fetchData() {
-      const request = await axios.post(`https://tame-pink-ray-suit.cyclic.cloud/api/answer/question_id`, {
+      const request = await axios.post(`https://gray-jolly-caridea.cyclic.cloud/api/answer/question_id`, {
         question_id: question_id,
       });
       // console.log(request)
