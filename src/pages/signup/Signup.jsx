@@ -15,7 +15,7 @@ function Signup() {
      e.preventDefault()
     try {
        
-     const regiUser = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/users`, {
+     const regiUser = await axios.post(`https://tame-pink-ray-suit.cyclic.cloud/api/users`, {
       firstName: form.firstName,
       lastName: form.lastName,
       userName: form.userName||`${form.fName}.${form.lName}`,
@@ -30,7 +30,8 @@ function Signup() {
       localStorage.setItem('auth-token', regiUser.data.token)
       navigate('/')
     } catch (error) {
-      alert(error.response.data.msg)
+      throw error
+      // alert(error.response.data.msg)
       
     }
 

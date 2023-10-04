@@ -23,7 +23,7 @@ function App() {
       token=''
     }
     else {
-      let userRes = await axios.get(`${process.env.REACT_APP_BASE_URL}/api/users`, { headers: { 'x-auth-token': token } })
+      let userRes = await axios.get(`https://tame-pink-ray-suit.cyclic.cloud/api/users`, { headers: { 'x-auth-token': token } })
       setuserData({
         token,
         user: {

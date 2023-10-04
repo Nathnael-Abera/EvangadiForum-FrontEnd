@@ -15,7 +15,7 @@ function Login() {
   const handelSubmit = async (e) => {
     e.preventDefault()
     try { 
-      const loginUser = await axios.post(`${process.env.REACT_APP_BASE_URL}/api/users/login`, {
+      const loginUser = await axios.post(`https://tame-pink-ray-suit.cyclic.cloud/api/users/login`, {
         email: form.email,
         password:form.password
       })
