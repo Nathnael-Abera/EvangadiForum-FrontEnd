@@ -15,7 +15,7 @@ function Signup() {
      e.preventDefault()
     try {
        
-     const regiUser = await axios.post(`https://gray-jolly-caridea.cyclic.cloud/api/users`, {
+     const regiUser = await axios.post(`https://gray-jolly-caridea.cyclic.cloud/api/users/`, {
       firstName: form.firstName,
       lastName: form.lastName,
       userName: form.userName||`${form.fName}.${form.lName}`,
